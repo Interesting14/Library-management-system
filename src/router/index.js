@@ -38,6 +38,8 @@ const Tinymce = _import('example/tinymce');
 const Mixin = _import('example/mixin');
 
 /* 系统管理*/
+const PersonalCenter = _import('systemSet/personalCenter');
+const MemberManage = _import('systemSet/memberManage');
 const PermissionsManage = _import('systemSet/permissionsManage');
 
 
@@ -133,8 +135,9 @@ export const constantRouterMap = [
     name: '系统设置',
     // icon: '404',
     children: [
-      { path: 'permissionsManage', component: PermissionsManage, name: '权限管理' },
-      
+      { path: 'personalCenter', component: PersonalCenter, name: '个人中心' }, 
+      { path: 'memberManage', component: MemberManage, name: '会员管理' }, 
+      { path: 'permissionsManage', component: PermissionsManage, name: '权限管理' }  
     ]
   },
   {

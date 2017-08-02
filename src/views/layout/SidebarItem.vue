@@ -20,20 +20,20 @@
 
             <router-link  to="/example/tableList"  v-if="routes['/example/tableList']" >
                 <el-menu-item index="/example/tableList">
-                    <i class="fa fa-table" aria-hidden="true"></i> 示例表格
+                    <i class="fa fa-table" aria-hidden="true"></i> 我的书单
             
                 </el-menu-item>
             </router-link>
 
             <router-link  to="/movie/newMovie"  v-if="routes['/movie/newMovie']" >
                 <el-menu-item index="/movie/newMovie">
-                    <i class="fa fa-file-video-o" aria-hidden="true"></i> 热映电影
+                    <i class="fa fa-file-video-o" aria-hidden="true"></i> 推荐书目
             
                 </el-menu-item>
             </router-link>
             <router-link  to="/movie/movieSearch"  v-if="routes['/movie/movieSearch']" >
                 <el-menu-item index="/movie/movieSearch">
-                    <i class="fa fa-file-video-o" aria-hidden="true"></i> 电影搜索
+                    <i class="fa fa-file-video-o" aria-hidden="true"></i> 图书搜索
             
                 </el-menu-item>
             </router-link>
@@ -60,7 +60,7 @@
             <!-- 三级菜单 示例-->
             <el-submenu index="综合实例" v-if="routes['/example/form'] || routes['/example/tinymce'] || routes['/example/mixin'] ">
                 <template slot="title">
-                    <i class="fa fa-envelope-open-o" aria-hidden="true"></i> 综合实例
+                    <i class="fa fa-envelope-open-o" aria-hidden="true"></i> 全部书目
                 </template>
                     <router-link  class="menu-indent" to="/example/form" v-if="routes['/example/form'] ">
                         <el-menu-item index="/example/form">
@@ -102,16 +102,28 @@
 
             </el-submenu>
 
-            <el-submenu index="系统设置" v-if="routes['/systemSet/permissionsManage'] || routes['/systemSet/loginLog']"> 
+            <el-submenu index="系统设置" v-if="routes['/systemSet/personalCenter'] || routes['/systemSet/permissionsManage'] || routes['/systemSet/loginLog']"> 
                 <template slot="title">
                     <i class="fa fa-cogs fa-fw" aria-hidden="true"></i> 系统设置
                 </template>
-              
+                    <router-link  class="menu-indent" to="/systemSet/personalCenter" v-if="routes['/systemSet/personalCenter']">
+                        <el-menu-item index="/systemSet/personalCenter">
+                            个人中心
+                        </el-menu-item>
+                    </router-link>
+
+                    <router-link  class="menu-indent" to="/systemSet/memberManage" v-if="routes['/systemSet/memberManage']">
+                        <el-menu-item index="/systemSet/memberManage">
+                            会员管理
+                        </el-menu-item>
+                    </router-link>
+
                     <router-link  class="menu-indent" to="/systemSet/permissionsManage" v-if="routes['/systemSet/permissionsManage']">
                         <el-menu-item index="/systemSet/permissionsManage">
                             权限管理
                         </el-menu-item>
                     </router-link>
+
                     <router-link  class="menu-indent" to="/systemSet/loginLog" v-if="routes['/systemSet/loginLog']">
                         <el-menu-item index="/systemSet/loginLog">
                             登录日志

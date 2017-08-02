@@ -25,6 +25,8 @@
         		"/example/tinymce":true,
         		"/example/mixin":true,
                 "/example/31":false,
+                "/systemSet/personalCenter":true,
+                "/systemSet/memberManage":true,
                 "/systemSet/permissionsManage":true,
                 "/systemSet/loginLog":true
         		
