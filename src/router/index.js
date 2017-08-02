@@ -80,7 +80,7 @@ export const constantRouterMap = [
     name: '',
     // icon: 'EXCEL',
     noDropdown: true,
-    children: [{ path: 'readme', component: Readme, name: '系统说明' }]
+    children: [{ path: 'readme', component: Readme, name: '首页' }]
   },
   {
     path: '/index',
@@ -99,7 +99,7 @@ export const constantRouterMap = [
     name: '',
     // icon: 'EXCEL',
     noDropdown: true,
-    children: [{ path: 'tableList', component: TableList, name: '示例表格' }]
+    children: [{ path: 'tableList', component: TableList, name: '我的书单' }]
   },
 
   {
@@ -109,7 +109,7 @@ export const constantRouterMap = [
     name: '',
     // icon: 'EXCEL',
     noDropdown: true,
-    children: [{ path: 'newMovie', component: NewMovie, name: '热映电影列表' }]
+    children: [{ path: 'newMovie', component: NewMovie, name: '推荐书目' }]
   },
   {
     path: '/movie',
@@ -118,7 +118,7 @@ export const constantRouterMap = [
     name: '',
     // icon: 'EXCEL',
     noDropdown: true,
-    children: [{ path: 'movieSearch', component: MovieSearch, name: '电影搜索' }]
+    children: [{ path: 'movieSearch', component: MovieSearch, name: '图书搜索' }]
   },
 
   {

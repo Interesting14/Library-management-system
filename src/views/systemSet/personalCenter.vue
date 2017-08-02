@@ -45,6 +45,9 @@
                                           <el-radio label="woman">女</el-radio>
                                     </el-radio-group>
                               </el-form-item>
+                              <el-form-item label="等级" >
+                                <el-input v-model="personalInfo.level" disabled=""></el-input>
+                                </el-form-item>
                               <el-form-item label="邮件地址" >
                                 <el-input v-model="personalInfo.email" disabled=""></el-input>
                               </el-form-item>
@@ -75,6 +78,10 @@
                                 <span v-if="personalInfo.sex == 'man'">男</span>
                                 <span v-else>女</span>
                                    
+                              </el-form-item>
+                              <el-form-item label="等级：">
+                                {{ personalInfo.level}}
+                               
                               </el-form-item>
                               <el-form-item label="邮件地址：">
                                 {{ personalInfo.email }}
@@ -130,6 +137,7 @@ export default {
             "nickname": vm.personalInfo.nickname,
             "trueName": vm.personalInfo.trueName,
             "sex": vm.personalInfo.sex,
+            "level":vm.personalInfo.level,
             "email": vm.personalInfo.email,
             "introduction": vm.personalInfo.introduction,
         };

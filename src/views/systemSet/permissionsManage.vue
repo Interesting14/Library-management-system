@@ -18,7 +18,7 @@
           <el-button class="filter-item" type="primary" @click="handleDelAll"  icon="edit">批量删除</el-button>
           <el-button class="filter-item" type="primary" icon="document" @click="handleDownload">导出</el-button> -->
      
-        <el-button class="filter-item" type="primary" @click="handleCreate"  icon="edit">新增角色</el-button>
+        <el-button class="filter-item" type="primary" @click="handleCreate"  icon="edit">新增</el-button>
     </div>
 
     
@@ -28,19 +28,19 @@
          <el-table-column type="selection" width="65">
          </el-table-column>
 
-          <el-table-column align="center" label='序号' width="100">
+          <el-table-column align="center" label='序号' width="150">
             <template scope="scope">
               {{scope.$index}}
             </template>
           </el-table-column>
 
-          <el-table-column label="角色" width="">
+          <el-table-column label="等级" width="200" align="center" >
             <template scope="scope">
               {{scope.row.smRoleBeanDto.roleName}}
             </template>
           </el-table-column>
 
-          <el-table-column label="对应用户" width="">
+          <el-table-column label="对应用户" width="350">
             <template scope="scope">
                <template v-for="item in scope.row.userbaseinfoList">
                     <span >{{ item.userName  }} &nbsp; &nbsp;</span>
@@ -54,8 +54,8 @@
             <el-table-column align="center"  label="操作" >
                 <template scope="scope">
                     <el-button icon="edit" size="small" @click="setPermissions(scope.$index, scope.row)" >设置权限</el-button>
-                    <el-button icon="edit" size="small" @click="setUser(scope.$index, scope.row)">设置成员</el-button>
-                   <el-button icon="edit" size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+                   <el-button icon="edit" size="small"  @click="handleCreate">编辑</el-button>
+                   <el-button icon="edit" size="small" @click="setUser(scope.$index, scope.row)">设置成员</el-button>
                    <el-button icon="delete" size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
                          
                 </template>
