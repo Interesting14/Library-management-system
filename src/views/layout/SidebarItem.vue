@@ -58,10 +58,37 @@
             </el-submenu>
             
             <!-- 三级菜单 示例-->
-            <el-submenu index="综合实例" v-if="routes['/example/form'] || routes['/example/tinymce'] || routes['/example/mixin'] ">
+            <el-submenu index="综合实例" v-if="routes['/example/education'] || routes['/example/form'] || routes['/example/tinymce'] || routes['/example/mixin'] ">
                 <template slot="title">
                     <i class="fa fa-envelope-open-o" aria-hidden="true"></i> 全部书目
                 </template>
+
+                    <router-link  class="menu-indent" to="/example/education" v-if="routes['/example/education']">
+                        <el-menu-item index="/example/education">
+                            教育教学
+                        </el-menu-item>
+                    </router-link>
+                    <router-link  class="menu-indent" to="" v-if="">
+                        <el-menu-item index="">
+                            青春文学
+                        </el-menu-item>
+                    </router-link>
+                    <router-link  class="menu-indent" to="" v-if="">
+                        <el-menu-item index="">
+                            科技生活
+                        </el-menu-item>
+                    </router-link>
+                    <router-link  class="menu-indent" to="" v-if="">
+                        <el-menu-item index="">
+                            人文历史
+                        </el-menu-item>
+                    </router-link>
+                    <router-link  class="menu-indent" to="" v-if="">
+                        <el-menu-item index="">
+                            少儿读物
+                        </el-menu-item>
+                    </router-link>
+
                     <router-link  class="menu-indent" to="/example/form" v-if="routes['/example/form'] ">
                         <el-menu-item index="/example/form">
                             form表单编辑

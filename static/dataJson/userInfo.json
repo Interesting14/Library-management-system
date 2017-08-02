@@ -21,6 +21,7 @@
                 "/movie/movieSearch":true,
         		"/errorpage/401":false,
         		"/errorpage/404":false,
+                "/example/education":true,
                 "/example/form":true,
         		"/example/tinymce":true,
         		"/example/mixin":true,

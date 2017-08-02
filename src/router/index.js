@@ -22,20 +22,20 @@ const reset = _import('login/reset');
 const Err404 = _import('error/404');
 const Err401 = _import('error/401');
 
-
 const PersonalInfo = _import('index/personalInfo');
 const Readme = _import('index/readme');
+
 /* example*/
+const Education = _import('example/education');
+
 const TableList = _import('example/tableList');
+const Form = _import('example/form');
+const Tinymce = _import('example/tinymce');
+const Mixin = _import('example/mixin');
 
 // 豆瓣电影
 const NewMovie = _import('movie/newMovie');
 const MovieSearch = _import('movie/movieSearch');
-
-
-const Form = _import('example/form');
-const Tinymce = _import('example/tinymce');
-const Mixin = _import('example/mixin');
 
 /* 系统管理*/
 const PersonalCenter = _import('systemSet/personalCenter');
@@ -144,12 +144,11 @@ export const constantRouterMap = [
     path: '/example',
     component: Layout,
     redirect: 'noredirect',
-    name: '综合实例',
+    name: '全部书目',
     // icon: 'zonghe',
     children: [
-      
+      { path: 'education', component: Education, name: '教育教学' },  
       { path: 'form', component: Form, name: 'form表单编辑' },
-
       { path: 'tinymce', component: Tinymce, name: '富文本编辑器' },
       { path: 'mixin', component: Mixin, name: '小组件' },
       { path: '31', component: Form, name: '三级菜单1' },
