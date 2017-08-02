@@ -144,7 +144,7 @@ export default {
                
         },
         temp: {
-        	//初始化数据
+          //初始化数据
             "chnlId": "",
             "hisChnlId": "",
             "chnlName": "",
@@ -153,7 +153,7 @@ export default {
             "orderNum": 10
         },
         add: {
-        	//初始化数据
+          //初始化数据
             "chnlId": "",
             "hisChnlId": "",
             "chnlName": "",

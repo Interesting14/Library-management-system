@@ -28,7 +28,7 @@
           },
           {
             "id": "10001",
-            "menuName": "示例表格",
+            "menuName": "我的书单",
             "url": "/example/tableList",
             "icon": "fa-clock-o",
             "remark": null,
@@ -39,7 +39,7 @@
           },
           {
             "id": "10002",
-            "menuName": "热映电影",
+            "menuName": "推荐书目",
             "url": "/movie/newMovie",
             "icon": "fa-clock-o",
             "remark": null,
@@ -50,7 +50,7 @@
           },
           {
             "id": "100022",
-            "menuName": "电影搜索",
+            "menuName": "图书搜索",
             "url": "/movie/movieSearch",
             "icon": "fa-clock-o",
             "remark": null,
@@ -61,7 +61,7 @@
           },
           {
             "id": "10003",
-            "menuName": "form表单编辑",
+            "menuName": "全部书目",
             "url": "/example/form",
             "icon": "fa-calendar",
             "remark": null,
@@ -72,7 +72,7 @@
           },
           {
             "id": "10004",
-            "menuName": "富文本编辑器",
+            "menuName": "系统设置",
             "url": "/example/tinymce",
             "icon": "fa-clock-o",
             "remark": null,

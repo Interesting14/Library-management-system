@@ -28,8 +28,8 @@
            "userbaseinfoList": [
              {
                "id": "1",
-               "userCode": "lss",
-               "userName": "楚乔",
+               "userCode": "小乔",
+               "userName": "Coco",
                "gender": 4173,
                "birthday": null,
                "pinyinCode": null,
@@ -56,7 +56,7 @@
                "regType": null,
                "headPhoto": null,
                "resume": null,
-               "email": "81438234@qq.com"
+               "email": "659575896@qq.com"
              }
              
            ]
@@ -66,7 +66,7 @@
              "id": "68a2de8f949f4dd48b7a35da9d343d49",
              "orgId": "1",
              "hospitalId": "1",
-             "roleName": "财务",
+             "roleName": "高级会员",
              "remark": "",
              "seqno": 1,
              "activeFlag": "Y",
@@ -83,7 +83,7 @@
              {
                "id": "05d3675607a04c6eaed433913bb725c3",
                "userCode": "lvmanna",
-               "userName": "吕蔓娜",
+               "userName": "楠神",
                "gender": 4174,
                "birthday": null,
                "pinyinCode": "lmn",
@@ -114,8 +114,8 @@
              },
              {
                "id": "5",
-               "userCode": "liyu",
-               "userName": "李瑜",
+               "userCode": "薛之谦",
+               "userName": "薛之谦",
                "gender": 4174,
                "birthday": null,
                "pinyinCode": null,
@@ -132,7 +132,7 @@
                "seqno": null,
                "creatorId": "0",
                "creatorCode": "admin",
-               "creatorName": "管理员",
+               "creatorName": "普通会员",
                "createTime": null,
                "lastUpdId": null,
                "lastUpdCode": null,
@@ -142,13 +142,34 @@
                "regType": null,
                "headPhoto": null,
                "resume": null,
-               "email": "liyu@noahhealthcare.com"
-             },
+               "email": null
+             }
+           ]
+         },
+         {
+           "smRoleBeanDto": {
+             "id": "4906915d8d464769a76dd765c46304df",
+             "orgId": "1",
+             "hospitalId": "1",
+             "roleName": "普通会员",
+             "remark": "",
+             "seqno": 1,
+             "activeFlag": "Y",
+             "creatorId": "997a4bce5a744389aeb3a54ca1480195",
+             "creatorCode": "test",
+             "creatorName": "测试",
+             "createTime": "2017-05-31 18:08:16",
+             "lastUpdId": null,
+             "lastUpdCode": null,
+             "lastUpdName": null,
+             "lastTime": null
+           },
+           "userbaseinfoList": [
              {
-               "id": "6",
-               "userCode": "huangmanli",
-               "userName": "黄漫丽",
-               "gender": 4174,
+               "id": "1",
+               "userCode": "Meky",
+               "userName": "Meky",
+               "gender": 4173,
                "birthday": null,
                "pinyinCode": null,
                "wubiCode": null,
@@ -156,31 +177,31 @@
                "identifierId": "无",
                "phone": null,
                "careerTitle": null,
-               "userType": 6642,
+               "userType": 5850,
                "orgId": "1",
                "hospitalId": "1",
-               "operationDept": "1402",
+               "operationDept": "1401",
                "remark": null,
                "seqno": null,
                "creatorId": "0",
                "creatorCode": "admin",
-               "creatorName": "管理员",
+               "creatorName": "普通会员",
                "createTime": null,
                "lastUpdId": null,
                "lastUpdCode": null,
                "lastUpdName": null,
                "lastTime": null,
-               "operationDeptId": "14",
+               "operationDeptId": "13",
                "regType": null,
                "headPhoto": null,
                "resume": null,
-               "email": "huangmanli@noahhealthcare.com"
+               "email": null
              },
              {
-               "id": "7",
-               "userCode": "fengmeijie",
-               "userName": "冯美洁",
-               "gender": 4174,
+               "id": "2",
+               "userCode": "小明",
+               "userName": "小明",
+               "gender": 4173,
                "birthday": null,
                "pinyinCode": null,
                "wubiCode": null,
@@ -188,30 +209,30 @@
                "identifierId": "无",
                "phone": null,
                "careerTitle": null,
-               "userType": 6642,
+               "userType": 5850,
                "orgId": "1",
                "hospitalId": "1",
-               "operationDept": "1402",
+               "operationDept": "1401",
                "remark": null,
                "seqno": null,
                "creatorId": "0",
                "creatorCode": "admin",
-               "creatorName": "管理员",
+               "creatorName": "普通会员",
                "createTime": null,
                "lastUpdId": null,
                "lastUpdCode": null,
                "lastUpdName": null,
                "lastTime": null,
-               "operationDeptId": "14",
+               "operationDeptId": "13",
                "regType": null,
                "headPhoto": null,
                "resume": null,
-               "email": "fengmeijie@noahhealthcare.com"
+               "email": null
              },
              {
                "id": "83dee93b283945409e55ba3a2e034566",
                "userCode": "zhangrongheng",
-               "userName": "张荣恒",
+               "userName": "哆啦A聪",
                "gender": 4174,
                "birthday": "1970-01-01 00:00:00",
                "pinyinCode": "zrh",
@@ -240,8 +261,9 @@
                "resume": null,
                "email": null
              }
+             
            ]
-         }
+        }
     ]
   }
 }
