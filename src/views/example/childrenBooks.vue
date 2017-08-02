@@ -1,5 +1,5 @@
 <template>
-	<p>education</p>
+	<p>childrenBooks</p>
 </template>
 
 <script>

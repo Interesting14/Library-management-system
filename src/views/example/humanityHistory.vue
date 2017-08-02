@@ -1,5 +1,5 @@
 <template>
-	<p>education</p>
+	<p>humanityHistory</p>
 </template>
 
 <script>

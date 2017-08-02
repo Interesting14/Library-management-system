@@ -1,5 +1,5 @@
 <template>
-	<p>education</p>
+	<p>technologyLife</p>
 </template>
 
 <script>
