@@ -7,7 +7,7 @@
                 <router-link to="/login" class="back-icon">
                     <i class="el-icon-arrow-left"></i>
                 </router-link>
-                <h3 class="title">重设密码</h3>
+                <h3 class="title">注册</h3>
             </div>
             <el-form-item prop="email">
                 <el-input name="email" type="text" v-model="resetForm.email"
@@ -15,7 +15,7 @@
             </el-form-item>
             <el-form-item prop="code">
                 <el-input name="code" type="text" v-model="resetForm.code"
-                          placeholder="验证码"></el-input>
+                          placeholder="用户名"></el-input>
             </el-form-item>
             <el-form-item prop="password">
                 <el-input name="password" :type="passwordType" v-model="resetForm.password"
@@ -29,8 +29,8 @@
             </el-form-item>
 
             <el-form-item style="width:100%;">
-                <el-button type="primary" style="width:100%;" :loading="loading" @click.native.prevent="setPWD">
-                    修改密码
+                <el-button type="primary" style="width:100%;" :loading="loading" @click.native.prevent="Register">
+                    注册
                 </el-button>
             </el-form-item>
         </el-form>
@@ -93,27 +93,27 @@
         }
       },
       methods: {
-        setPWD() {
-          // this.loading = true;
-          // const _this = this;
-          // this.$refs.resetForm.validate(valid => {
-          //   if (valid) {
-          //     const data = {
-          //       email: this.resetForm.email,
-          //       code: this.resetForm.code,
-          //       new_password: this.resetForm.checkPass
-          //     };
+        Register() {
+           this.loading = true;
+           const _this = this;
+           this.$refs.resetForm.validate(valid => {
+             if (valid) {
+               const data = {
+                 email: this.resetForm.email,
+                 code: this.resetForm.code,
+                 new_password: this.resetForm.checkPass
+               };
           //     restPWD(data).then(() => {
-          //       this.$message.success('密码设置成功,五秒后调整到登录页');
-          //       setTimeout(() => {
-          //         _this.$router.push({ path: '/login' })
-          //       }, 5 * 1000)
-          //     });
-          //   } else {
-          //     this.$message.error('error submit!!');
-          //   }
-          //   this.loading = false;
-          // });
+                 this.$message.success('注册成功,五秒后自动跳转到登录页');
+                 setTimeout(() => {
+                   _this.$router.push({ path: '/login' })
+                 }, 5 * 1000)
+               ;
+             } else {
+               this.$message.error('error submit!!');
+             }
+             this.loading = false;
+           });
         },
         togglePasswordType() {
           if (this.passwordType === 'text') {

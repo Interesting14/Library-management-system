@@ -3,7 +3,7 @@
         <el-form autoComplete="on" :model="loginForm" :rules="loginRules" ref="loginForm" label-position="left"
                  label-width="0px"
                  class="card-box login-form">
-            <h3 class="title">系统登录<i class="fa fa-tripadvisor" aria-hidden="true"></i></h3>
+            <h3 class="title">图书管理系统登录</h3>
             <el-form-item prop="email">
                 <span class="svg-container"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
                 <el-input name="email" type="text" v-model="loginForm.email" autoComplete="off"
@@ -19,11 +19,28 @@
                     登录
                 </el-button>
             </el-form-item>
-            <div class='tips'>测试帐号为:81438234@qq.com 密码：123456</div>
-            
+            <div class='tips'>（测试帐号为:659575896@qq.com 密码：123456）</div>
+            <a href="/sendpwd#/sendpwd">
+<!--             <div style="height:35px;background-color: #20a0ff;border-radius:5px;margin:10px 0" align="center">
             <router-link to="/sendpwd" class="forget-pwd">
-                忘记密码?(或首次登录)
+                忘记密码
             </router-link>
+            </div> -->
+            <el-button type="primary" style="width:100%;margin:10px 0">
+                忘记密码
+            </el-button>
+            
+            </a>
+            <a href="reset#/reset">
+<!--             <div style="height:35px;background-color: #20a0ff;border-radius:5px;" align="center">
+            <router-link to="/reset" class="register">
+                注册
+            </router-link>
+            </div> -->
+             <el-button type="primary" style="width:100%;" >
+                注册
+            </el-button>
+            </a>
         </el-form>
        
     </div>
@@ -48,7 +65,7 @@
           }
         };
         const validateAccount = (rule, value, callback) => {
-        if (value !== '81438234@qq.com') {
+        if (value !== '659575896@qq.com') {
               callback(new Error('帐号不存在！'));
             } else {
               callback();
@@ -71,7 +88,7 @@
 
         return {
             loginForm: {
-                email: '81438234@qq.com',
+                email: '659575896@qq.com',
                 password: ''
             },
             loginRules: {
@@ -213,8 +230,11 @@
             color: #454545;
         }
 
-        .forget-pwd {
+        .register,.forget-pwd {
             color: #fff;
+            background-color: #20a0ff;
+            font-size: 14px;
+            line-height: 35px;
         }
     }
 

@@ -8,68 +8,36 @@
     "pageSize": 10,
     "data": [
       {
-        "chnlId": "10004",
-        "hisChnlId": "2",
-        "chnlName": "YYALIPAY",
-        "state": "ZC",
+        "chnlId": "659575896@qq.com",
+        "hisChnlId": "Coco",
+        "chnlName": "女",
+        "state": "管理员",
         "isavailable": "Y",
-        "orderNum": 10
+        "orderNum": 13466666666
       },
       {
-        "chnlId": "10007",
-        "hisChnlId": "10",
-        "chnlName": "JKSZ",
-        "state": "ZC",
+        "chnlId": "123456@qq.com",
+        "hisChnlId": "楠神",
+        "chnlName": "女",
+        "state": "高级会员",
         "isavailable": "Y",
-        "orderNum": 10
+        "orderNum": 13577777777
       },
       {
-        "chnlId": "10009",
-        "hisChnlId": "12",
-        "chnlName": "JY160",
-        "state": "ZC",
+        "chnlId": "654321@qq.com",
+        "hisChnlId": "Meky",
+        "chnlName": "女",
+        "state": "普通会员",
         "isavailable": "Y",
-        "orderNum": 10
+        "orderNum": 13688888888
       },
       {
-        "chnlId": "10008",
-        "hisChnlId": "13",
-        "chnlName": "PAJK",
-        "state": "ZC",
+        "chnlId": "48514452@163.com",
+        "hisChnlId": "小明",
+        "chnlName": "男",
+        "state": "普通会员",
         "isavailable": "Y",
-        "orderNum": 10
-      },
-      {
-        "chnlId": "10002",
-        "hisChnlId": "4",
-        "chnlName": "YXWWECHAT",
-        "state": "ZC",
-        "isavailable": "Y",
-        "orderNum": 10
-      },
-      {
-        "chnlId": "10003",
-        "hisChnlId": "8",
-        "chnlName": "YXWALIPAY",
-        "state": "ZC",
-        "isavailable": "Y",
-        "orderNum": 10
-      },
-      {
-        "chnlId": "10005",
-        "hisChnlId": "3",
-        "chnlName": "JKYWECHAT",
-        "state": "ZC",
-        "isavailable": "Y",
-        "orderNum": 10
-      },
-      {
-        "chnlId": "10006",
-        "hisChnlId": "7",
-        "chnlName": "JKYALIPAY",
-        "state": "ZC",
-        "isavailable": "Y",
-        "orderNum": 10
+        "orderNum": 13799999999
       }
       
     ]
