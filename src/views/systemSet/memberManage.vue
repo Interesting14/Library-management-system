@@ -29,7 +29,7 @@
 
           <el-table-column align="center" label='会员编号' width="100">
             <template scope="scope">
-              {{scope.$index}}
+              {{(scope.$index)+1}}
             </template>
           </el-table-column>
 

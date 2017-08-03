@@ -18,8 +18,8 @@
                 </el-menu-item>
             </router-link>
 
-            <router-link  to="/example/tableList"  v-if="routes['/example/tableList']" >
-                <el-menu-item index="/example/tableList">
+            <router-link  to="/example/myBooklist"  v-if="routes['/example/myBooklist']" >
+                <el-menu-item index="/example/myBooklist">
                     <i class="fa fa-table" aria-hidden="true"></i> 我的书单
             
                 </el-menu-item>

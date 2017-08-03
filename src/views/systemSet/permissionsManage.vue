@@ -30,7 +30,7 @@
 
           <el-table-column align="center" label='序号' width="150">
             <template scope="scope">
-              {{scope.$index}}
+              {{(scope.$index)+1}}
             </template>
           </el-table-column>
 

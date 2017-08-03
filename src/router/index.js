@@ -29,6 +29,8 @@ const Readme = _import('index/readme');
 const Education = _import('example/education');
 
 const TableList = _import('example/tableList');
+const MyBooklist = _import('example/myBooklist');
+
 const Form = _import('example/form');
 const Tinymce = _import('example/tinymce');
 const Mixin = _import('example/mixin');
@@ -95,7 +97,7 @@ export const constantRouterMap = [
     name: '',
     // icon: 'EXCEL',
     noDropdown: true,
-    children: [{ path: 'tableList', component: TableList, name: '我的书单' }]
+    children: [{ path: 'myBooklist', component: MyBooklist, name: '我的书单' }]
   },
 
   {
