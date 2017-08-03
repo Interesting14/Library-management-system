@@ -27,6 +27,10 @@ const Readme = _import('index/readme');
 
 /* example*/
 const Education = _import('example/education');
+const YouthLiterature = _import('example/youthLiterature');
+const TechnologyLife = _import('example/technologyLife');
+const HumanityHistory = _import('example/humanityHistory');
+const ChildrenBooks = _import('example/childrenBooks');
 
 const TableList = _import('example/tableList');
 const MyBooklist = _import('example/myBooklist');
@@ -149,7 +153,12 @@ export const constantRouterMap = [
     name: '全部书目',
     // icon: 'zonghe',
     children: [
-      { path: 'education', component: Education, name: '教育教学' },  
+      { path: 'education', component: Education, name: '教育教学' }, 
+      { path: 'youthLiterature', component: YouthLiterature, name: '青春文学' }, 
+      { path: 'technologyLife', component: TechnologyLife, name: '科技生活' },
+      { path: 'humanityHistory', component: HumanityHistory, name: '人文历史' },
+      { path: 'childrenBooks', component: ChildrenBooks, name: '少儿读物' },
+
       { path: 'form', component: Form, name: 'form表单编辑' },
       { path: 'tinymce', component: Tinymce, name: '富文本编辑器' },
       { path: 'mixin', component: Mixin, name: '小组件' },

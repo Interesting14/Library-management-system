@@ -58,7 +58,7 @@
             </el-submenu>
             
             <!-- 三级菜单 示例-->
-            <el-submenu index="综合实例" v-if="routes['/example/education'] || routes['/example/form'] || routes['/example/tinymce'] || routes['/example/mixin'] ">
+            <el-submenu index="综合实例" v-if="routes['/example/education'] || routes['/example/youthLiterature'] || routes['/example/technologyLife'] || routes['/example/humanityHistory'] || routes['/example/childrenBooks'] || routes['/example/form'] || routes['/example/tinymce'] || routes['/example/mixin'] ">
                 <template slot="title">
                     <i class="fa fa-envelope-open-o" aria-hidden="true"></i> 全部书目
                 </template>
@@ -68,23 +68,23 @@
                             教育教学
                         </el-menu-item>
                     </router-link>
-                    <router-link  class="menu-indent" to="" v-if="">
-                        <el-menu-item index="">
+                    <router-link  class="menu-indent" to="/example/youthLiterature" v-if="routes['/example/youthLiterature']">
+                        <el-menu-item index="/example/youthLiterature">
                             青春文学
                         </el-menu-item>
                     </router-link>
-                    <router-link  class="menu-indent" to="" v-if="">
-                        <el-menu-item index="">
+                    <router-link  class="menu-indent" to="/example/technologyLife" v-if="routes['/example/technologyLife']">
+                        <el-menu-item index="/example/technologyLife">
                             科技生活
                         </el-menu-item>
                     </router-link>
-                    <router-link  class="menu-indent" to="" v-if="">
-                        <el-menu-item index="">
+                    <router-link  class="menu-indent" to="/example/humanityHistory" v-if="routes['/example/humanityHistory']">
+                        <el-menu-item index="/example/humanityHistory">
                             人文历史
                         </el-menu-item>
                     </router-link>
-                    <router-link  class="menu-indent" to="" v-if="">
-                        <el-menu-item index="">
+                    <router-link  class="menu-indent" to="/example/childrenBooks" v-if="routes['/example/childrenBooks']">
+                        <el-menu-item index="/example/childrenBooks">
                             少儿读物
                         </el-menu-item>
                     </router-link>
