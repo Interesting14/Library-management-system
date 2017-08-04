@@ -6,13 +6,13 @@
             <!-- 一级菜单 示例-->
            <!--  <router-link  to="/index/readme"  v-if="routes['/index/readme']" >
                 <el-menu-item index="/index/readme">
-                    <i class="el-icon-star-on" aria-hidden="true"></i> 系统说明
+                    <i class="el-icon-star-on" aria-hidden="true"></i> 首页
             
                 </el-menu-item>
             </router-link> -->
 
-            <router-link  to="/index/personalInfo"  v-if="routes['/index/personalInfo']" >
-                <el-menu-item index="/index/personalInfo">
+            <router-link  to="/index/readme"  v-if="routes['/index/readme']" >
+                <el-menu-item index="/index/readme">
                     <i class="fa fa-home" aria-hidden="true"></i> 首页
             
                 </el-menu-item>
@@ -121,10 +121,7 @@
                                 <el-menu-item index="/example/table2">
                                     地址错误跳404
                                 </el-menu-item>
-                            </router-link>
-
-
-                       
+                            </router-link>                     
                     </el-submenu>
 
             </el-submenu>

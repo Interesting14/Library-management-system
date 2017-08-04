@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-  <el-collapse v-model="activeName" accordion>
+  <el-collapse v-model="activeName" accordion >
   <el-collapse-item title="《鬼吹灯》天下霸唱" name="1">
   <el-row style="margin-left:30px;">
   <h1>《鬼吹灯》</h1>

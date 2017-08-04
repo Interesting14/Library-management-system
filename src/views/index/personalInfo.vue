@@ -45,6 +45,9 @@
                                           <el-radio label="woman">女</el-radio>
                                     </el-radio-group>
                               </el-form-item>
+                               <el-form-item label="等级" >
+                                <el-input v-model="personalInfo.level" disabled=""></el-input>
+                              </el-form-item>
                               <el-form-item label="邮件地址" >
                                 <el-input v-model="personalInfo.email" disabled=""></el-input>
                               </el-form-item>
@@ -74,6 +77,10 @@
                               <el-form-item label="性别：">
                                 <span v-if="personalInfo.sex == 'man'">男</span>
                                 <span v-else>女</span>
+
+                              </el-form-item>
+                              <el-form-item label="等级：">
+                                {{ personalInfo.level}}
                                    
                               </el-form-item>
                               <el-form-item label="邮件地址：">
@@ -130,6 +137,7 @@ export default {
             "nickname": vm.personalInfo.nickname,
             "trueName": vm.personalInfo.trueName,
             "sex": vm.personalInfo.sex,
+            "level": vm.personalInfo.level,
             "email": vm.personalInfo.email,
             "introduction": vm.personalInfo.introduction,
         };
@@ -181,7 +189,7 @@ export default {
         }
     }
     .user_info{
-        padding-bottom: 20px;
+        /*padding-bottom: 20px;*/
         border: 1px solid #dee1e2;
         h2{
             margin: 0;
@@ -192,10 +200,13 @@ export default {
                 float: right;
                 font-size: 16px;
                 color: #7ab8ed;
+                /*line-height: -20px;*/
             }
         }
     }
-    .user_info_form,.user_info_text{
-        padding: 20px;
-    }
+/*    .user_info_form,.user_info_text{
+        padding: 20px,20px;
+        line-height: 20px;
+    }*/
+
 </style>

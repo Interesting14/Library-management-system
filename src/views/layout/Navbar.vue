@@ -17,7 +17,7 @@
                 <el-dropdown-menu class="user-dropdown" slot="dropdown">
                     <router-link class='inlineBlock' to="/index/personalInfo">
                         <el-dropdown-item>
-                            首页
+                            用户信息
                         </el-dropdown-item>
                     </router-link>
                     <el-dropdown-item >
@@ -38,8 +38,6 @@
 
             <el-form class="small-space" :model="passwordForm"  :rules="passwordFormRules" ref="passwordForm" label-position="right" label-width="100px" style='width: 400px; margin-left:50px;'>
              
-               
-
                 <el-form-item label="原密码" prop="oldPassword" >
                   <el-input type="password" v-model="passwordForm.oldPassword" auto-complete="off"></el-input>
                 </el-form-item>
@@ -51,8 +49,6 @@
                 <el-form-item label="重复新密码" prop="newPassword2">
                   <el-input type="password" v-model="passwordForm.newPassword2" auto-complete="off"></el-input>
                 </el-form-item>
-
-                
                
             </el-form>
 
@@ -72,9 +68,7 @@
                         <el-radio label="green">绿色</el-radio>
                         <el-radio label="red">红色</el-radio>
                    </el-radio-group>
-                 </el-form-item>
-
-                
+                 </el-form-item>               
                
               </el-form>
 

@@ -30,13 +30,13 @@
          <el-table-column type="selection" width="50">
          </el-table-column>
 
-          <el-table-column align="center" label='序号' width="70" >
+          <el-table-column align="center" label='编号' width="70" >
             <template scope="scope">
               {{ scope.$index+1 }}
             </template>
           </el-table-column>
 
-            <el-table-column label="海报" width="" align="center">
+            <el-table-column label="封面" width="" align="center">
             <template scope="scope">
                 <a :href="scope.row.alt" class="" style="margin: 10px 0;display: inline-block;">
                     <img :src="scope.row.images.small" alt="" style="vertical-align: middle;">
@@ -45,20 +45,20 @@
             </template>
           </el-table-column>
 
-          <el-table-column label="名称" width="" prop="title" sortable>
+          <el-table-column label="书名" width="" prop="title" sortable align="center">
             <template scope="scope">
                
               {{ scope.row.title }}
             </template>
           </el-table-column>
 
-            <el-table-column label="导演" width="" prop="directors[0].alt" sortable>
+            <el-table-column label="作者" width="" prop="directors[0].alt" sortable align="center">
             <template scope="scope">
               <a :href="scope.row.directors[0].alt">{{scope.row.directors[0].name}}</a>
             </template>
           </el-table-column>
 
-          <el-table-column label="主演" width="">
+          <el-table-column label="出版社" align="center" width="150">
             <template scope="scope" >
                 <template class="" v-for="item in scope.row.casts">
                     <p><a :href="item.alt">&nbsp;{{ item.name }}&nbsp;</a>、</p>
@@ -68,36 +68,29 @@
           </el-table-column>
 
 
-          <el-table-column label="类型" width="">
+          <el-table-column label="出版年份" align="center" width=""  prop="rating.average" sortable >
+            <template scope="scope">
+              {{scope.row.rating.average}}
+            </template>
+          </el-table-column>
+ 
+          <el-table-column label="类型" align="center"  width="">
             <template scope="scope">
               <span>{{scope.row.genres}}</span>
             </template>
           </el-table-column>
 
-          <el-table-column label="综合评分"  align="center" width=""  prop="rating.average" sortable >
-            <template scope="scope">
-              {{scope.row.rating.average}}
-            </template>
-          </el-table-column>
-
-          <el-table-column align="center" prop="created_at" label="收藏量" width=""   >
-            <template scope="scope">
-              
-              <span>{{scope.row.collect_count}}</span>
-            </template>
-          </el-table-column>
-
-            <el-table-column align="center"  label="上映年份" prop="year" sortable >
+            <el-table-column align="center"  label="收藏量" prop="year" sortable >
                 <template scope="scope">
                   <!-- <i class="el-icon-time"></i> -->
                   <span>{{scope.row.year}}</span>
                 </template>
             </el-table-column>
 
-            <el-table-column align="center"  label="操作" >
+            <el-table-column align="center" label="操作" >
                 <template scope="scope">
                     
-                   <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+                   <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button><br/>
                    <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
                          
                 </template>
@@ -111,10 +104,7 @@
     </div>
     <!-- 新增弹窗 -->
     <el-dialog title="表单新增" :visible.sync="dialogFormVisible">
-          <el-form class="small-space" :model="temp" label-position="left" label-width="70px" style='width: 400px; margin-left:50px;'>
-         
-           
-
+          <el-form class="small-space" :model="temp" label-position="left" label-width="70px" style='width: 400px; margin-left:50px;'>                 
             <el-form-item label="字段1">
               <el-input v-model="temp.chnlId"></el-input>
             </el-form-item>
@@ -129,9 +119,7 @@
 
             <el-form-item label="字段4">
               <el-input v-model="temp.state"></el-input>
-            </el-form-item>
-
-           
+            </el-form-item>           
           </el-form>
 
           <div slot="footer" class="dialog-footer">
@@ -188,10 +176,7 @@ export default {
   },
   mounted() {
     var vm = this;
-
     vm.getList();
-
-
 
   },
   methods: {
@@ -244,9 +229,7 @@ export default {
         },function(res){
             
             vm.listLoading = false;
-        },true)
-
-        
+        },true)      
 
     },
     //编辑
