@@ -13,6 +13,13 @@
     		<el-table-column prop="author" label="作者" align="center"></el-table-column>
     		<el-table-column prop="date" label="日期" sortable width="180" align="center"></el-table-column>
     		<el-table-column prop="score" label="评分" sortable width="180" align="center"></el-table-column>
+
+    		<el-table-column label="操作" width="120" align="center">
+      			<template scope="scope">
+        			<el-button @click.native.prevent="deleteRow(scope.$index, tableData)" type="text" size="small">删除
+        			</el-button>
+      			</template>
+    		</el-table-column>
   		</el-table>
 
   		<div class="block">
@@ -126,6 +133,9 @@
     	methods: {
       		formatter(row, column) {
         		return row.address;
+      		},
+      		deleteRow(index, rows) {
+        		rows.splice(index, 1);
       		}
     	}
   	}

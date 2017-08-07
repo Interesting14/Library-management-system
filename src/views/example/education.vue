@@ -14,6 +14,32 @@
     		<el-table-column prop="author" label="作者" align="center"></el-table-column>
     		<el-table-column prop="date" label="日期" sortable width="180" align="center"></el-table-column>
     		<el-table-column prop="score" label="评分" sortable width="180" align="center"></el-table-column>
+
+    		<el-table-column label="操作" width="120" align="center">
+      			<template scope="scope">
+        			<el-button @click.native.prevent="deleteRow(scope.$index, tableData)" type="text" size="small">删除
+        			</el-button>
+
+        			<el-button type="text" @click="dialogVisible = true">详情</el-button>
+						<el-dialog 
+							title="详情"
+  							:visible.sync="dialogVisible"
+  							size="tiny"
+  							:before-close="handleClose"
+  						>
+  							<span>
+								<h2>代码大全（第2版）</h2>
+								<p style="text-indent:2em;">第2版的《代码大全》是著名IT畅销书作者史蒂夫·迈克康奈尔11年前的经典著作的全新演绎：第2版不是第一版的简单修订增补，而是完全进行了重写；增加了很多与时俱进的内容。这也是一本完整的软件构建手册，涵盖了软件构建过程中的所有细节。它从软件质量和编程思想等方面论述了软件构建的各个问题，并详细论述了紧跟潮流的新技术、高屋建瓴的观点、通用的概念，还含有丰富而典型的程序示例。这本书中所论述的技术不仅填补了初级与高级编程技术之间的空白，而且也为程序员们提供了一个有关编程技巧的信息来源。这本书对经验丰富的程序员、技术带头人、自学的程序员及几乎不懂太多编程技巧的学生们都是大有裨益的。可以说，无论是什么背景的读者，阅读这本书都有助于在更短的时间内、更容易地写出更好的程序。</p>
+  							</span>
+
+  							<span slot="footer" class="dialog-footer">
+    							<el-button @click="dialogVisible = false">取 消</el-button>
+    							<el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+  							</span>
+						</el-dialog>
+      			</template>
+    		</el-table-column>
+
   		</el-table>
 
   		<div class="block">
@@ -51,6 +77,7 @@
   	export default {
     	data() {
       		return {
+        		dialogVisible: false,
         		tableData: [{
 	        		id: 'edu0001',
 	        		image: img1,
@@ -127,7 +154,17 @@
     	methods: {
       		formatter(row, column) {
         		return row.address;
-      		}
+      		},
+      		deleteRow(index, rows) {
+        		rows.splice(index, 1);
+      		},
+      		handleClose(done) {
+        		this.$confirm('确认关闭？')
+          		.then(_ => {
+            		done();
+          		})
+          		.catch(_ => {});
+            }
     	}
   	}
 </script>
