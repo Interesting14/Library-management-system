@@ -70,16 +70,16 @@
       </el-pagination>
     </div>
     <!-- 新增弹窗 -->
-    <el-dialog title="表单新增" :visible.sync="dialogFormVisible">
+    <el-dialog title="添加" :visible.sync="dialogFormVisible">
           <el-form class="small-space" :model="roleTemp" label-position="left" label-width="70px" style='width: 400px; margin-left:50px;'>
          
            
 
-            <el-form-item label="角色名称">
+            <el-form-item label="等级">
               <el-input v-model="roleTemp.roleName"></el-input>
             </el-form-item>
 
-            <el-form-item label="备注">
+            <el-form-item label="用户名">
               <el-input v-model="roleTemp.remark"></el-input>
             </el-form-item>
 
