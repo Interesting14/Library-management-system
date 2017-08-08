@@ -47,7 +47,7 @@
         <el-checkbox-group v-model="ruleForm.type">
           <el-checkbox label="checkbox1" name="type">不可外借</el-checkbox>
           <el-checkbox label="checkbox2" name="type">外借押金</el-checkbox>
-          <el-checkbox label="checkbox3" name="type">高级用户专属</el-checkbox>
+          <el-checkbox label="checkbox3" name="type">高级会员专属</el-checkbox>
           <el-checkbox label="checkbox4" name="type">珍藏版本</el-checkbox>
         </el-checkbox-group>
       </el-form-item>

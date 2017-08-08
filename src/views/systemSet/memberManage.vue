@@ -83,9 +83,6 @@
     <!-- 新增弹窗 -->
     <el-dialog title="会员新增" :visible.sync="dialogFormVisible">
           <el-form class="small-space" :model="temp" label-position="left" label-width="70px" style='width: 400px; margin-left:50px;'>
-         
-           
-
             <el-form-item label="账号">
               <el-input v-model="temp.chnlId"></el-input>
             </el-form-item>
@@ -105,17 +102,13 @@
             <el-form-item label="联系方式">
               <el-input v-model="temp.orderNum"></el-input>
             </el-form-item>
-
-           
           </el-form>
 
           <div slot="footer" class="dialog-footer">
             <el-button @click="dialogFormVisible = false">取 消</el-button>
-           
             <el-button type="primary" @click="handleCreateSubmit">确 定</el-button>
           </div>
     </el-dialog>
-
   </div>
 </template>
 
