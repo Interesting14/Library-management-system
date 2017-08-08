@@ -1,10 +1,12 @@
 <template>
   <div class="app-container">
     <code>
-    <div id="header">
+    <div id="header" style="margin-top:-50px">
         
         <div id="person">
+        <a href="#/example/myBooklist">
           <el-button type="text" icon="star-on">我的书单</el-button>
+          </a>
           <el-button type="text" icon="message">系统公告</el-button>
         </div>
         <div id="search">
@@ -19,9 +21,11 @@
             </el-select>
           </el-input>
         </div>
-        <h1>欢迎来到图书管理系统</h1>
+        <br/>
     </div>
 
+        <h1 style="font-family:'华文新魏';font-size:60px" align="center">图书信息管理系统</h1>
+    
     <div id="show" style="width:60%; height:400px;">
       <el-carousel :interval="5000" arrow="always" style="height:380px;">
         <el-carousel-item v-for="item in 4" :key="item"></el-carousel-item>
@@ -88,11 +92,12 @@
           </el-col>
         </li>
 
+        <hr  style="border:1px solid #eef1f6;"/><br/>
+
         <!-- 畅销排行榜 -->
         <li id="sell">
-          <h4>畅销排行榜</h4>
+          <h4 style="margin:0 0">畅销排行榜</h4>
           <el-row :gutter="20">
-
             <el-col :span="8" >
               <h4>Top1</h4>
               <img src="http://img3x3.ddimg.cn/81/7/23055003-1_l_16.jpg">
@@ -130,7 +135,7 @@
           </el-row>
         </li>
 
-        <hr  style="border:1px solid white;"/>
+        <hr  style="border:1px solid #eef1f6;"/>
 
         <!-- 图书分类 -->
         <li>
@@ -159,9 +164,17 @@
                 <img src="http://img3x5.ddimg.cn/38/17/23429675-1_l_4.jpg">
                   <p>《你是最好的自己》</p>
               </el-col>
+               <el-col :span="4" >
+                <img src="http://img3x5.ddimg.cn/38/17/23429675-1_l_4.jpg">
+                  <p>《你是最好的自己》</p>
+              </el-col>
             </el-tab-pane>
 
             <el-tab-pane label="经典名著" name="second">
+              <el-col :span="4" >
+                <img src="http://img3x7.ddimg.cn/90/24/21090357-1_l_40.jpg">
+                  <p>《百年孤独》</p>
+              </el-col>
               <el-col :span="4" >
                 <img src="http://img3x7.ddimg.cn/90/24/21090357-1_l_40.jpg">
                   <p>《百年孤独》</p>
@@ -205,9 +218,17 @@
                 <img src="http://img3x1.ddimg.cn/35/3/8964881-1_l_3.jpg">
                   <p>《安徒生童话》</p>
               </el-col>
+              <el-col :span="4" >
+                <img src="http://img3x1.ddimg.cn/35/3/8964881-1_l_3.jpg">
+                  <p>《安徒生童话》</p>
+              </el-col>
             </el-tab-pane>
 
             <el-tab-pane label="人文社科" name="fourth">
+              <el-col :span="4" >
+                <img src="http://img3x4.ddimg.cn/52/26/22915384-1_l_1.jpg">
+                  <p>《乡土中国》</p>
+              </el-col>
               <el-col :span="4" >
                 <img src="http://img3x4.ddimg.cn/52/26/22915384-1_l_1.jpg">
                   <p>《乡土中国》</p>
@@ -251,9 +272,17 @@
                 <img src="http://img3x0.ddimg.cn/66/31/23224080-1_l_2.jpg">
                   <p>《经济学原理（第六版）》</p>
               </el-col>
+              <el-col :span="4" >
+                <img src="http://img3x0.ddimg.cn/66/31/23224080-1_l_2.jpg">
+                  <p>《经济学原理（第六版）》</p>
+              </el-col>
             </el-tab-pane>
 
             <el-tab-pane label="保健/养生" name="sixth">
+              <el-col :span="4" >
+                <img src="http://img3x2.ddimg.cn/5/25/20771492-1_l_2.jpg">
+                  <p>《二十四节气养生法》</p>
+              </el-col>
               <el-col :span="4" >
                 <img src="http://img3x2.ddimg.cn/5/25/20771492-1_l_2.jpg">
                   <p>《二十四节气养生法》</p>
@@ -316,13 +345,13 @@
     </code>
 
     <div id="about" style="margin:80px 0;">
-    <h4 align="center">关于我们</h4>
+    <h3 align="center">关于我们</h3><br/>
       <el-row :gutter="20">
-          <el-col :span="4"  :offset="3"><router-link to="#">借阅查询 <i class="el-icon-search"></i></router-link></el-col>
-          <el-col :span="4" ><router-link to="#">个人中心 <i class="el-icon-menu"></i></router-link></el-col>
-          <el-col :span="4" ><router-link to="#">管理权限 <i class="el-icon-setting"></i></router-link></el-col>
-          <el-col :span="4" ><router-link to="#">我的书单 <i class="el-icon-star-on"></i></router-link></el-col>
-          <el-col :span="4" ><router-link to="#">历史记录 <i class="el-icon-time"></i></router-link></el-col>
+          <el-col :span="4"  :offset="3"><router-link to="/movie/movieSearch">图书搜索 <i class="el-icon-search"></i></router-link></el-col>
+          <el-col :span="4" ><router-link to="/systemSet/personalCenter">个人中心 <i class="el-icon-menu"></i></router-link></el-col>
+          <el-col :span="4" ><router-link to="/systemSet/permissionsManage">管理权限 <i class="el-icon-setting"></i></router-link></el-col>
+          <el-col :span="4" ><router-link to="/example/myBooklist">我的书单 <i class="el-icon-star-on"></i></router-link></el-col>
+          <el-col :span="4" ><router-link to="/example/table2">历史记录 <i class="el-icon-time"></i></router-link></el-col>
         </el-row>
     </div>
   </div>
