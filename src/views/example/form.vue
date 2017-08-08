@@ -1,62 +1,78 @@
 <template>
 <div v-cloak>
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-      <el-form-item label="活动名称" prop="name">
+      <el-form-item label="书名" prop="name">
             <el-col :span="11" >
                 <el-input v-model="ruleForm.name"></el-input>
             </el-col>
       </el-form-item>
-      <el-form-item label="活动区域" prop="region">
+
+      <el-form-item label="编号" prop="id">
             <el-col :span="11" >
-                <el-select v-model="ruleForm.region" placeholder="请选择活动区域"  >
-                  <el-option label="区域一" value="shanghai"></el-option>
-                  <el-option label="区域二" value="beijing"></el-option>
+                <el-input v-model="ruleForm.id"></el-input>
+            </el-col>
+      </el-form-item>
+
+      <el-form-item label="作者" prop="author">
+            <el-col :span="11" >
+                <el-input v-model="ruleForm.author"></el-input>
+            </el-col>
+      </el-form-item>
+
+      <el-form-item label="类别" prop="region">
+            <el-col :span="11">
+                <el-select v-model="ruleForm.region" placeholder="请选择书籍类别" style="width: 30%;">
+                  <el-option label="教育教学" value="edu"></el-option>
+                  <el-option label="青春文学" value="youth"></el-option>
+                  <el-option label="科技生活" value="tech"></el-option>
+                  <el-option label="人文历史" value="human"></el-option>
+                  <el-option label="少儿读物" value="child"></el-option>
                 </el-select>
              </el-col>
       </el-form-item>
-      <el-form-item label="活动时间" required>
+
+      <el-form-item label="出版日期" required>
         <el-col :span="5" >
           <el-form-item prop="date1" >
             <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
           </el-form-item>
         </el-col>
-        <el-col class="line" :span="1" align="center">&nbsp;-&nbsp;</el-col>
-        <el-col :span="5" >
-          <el-form-item prop="date2">
-            <el-time-picker type="fixed-time" placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
-          </el-form-item>
-        </el-col>
       </el-form-item>
-      <el-form-item label="即时配送" prop="delivery">
+
+      <el-form-item label="推荐书目" prop="delivery">
         <el-switch on-text="" off-text="" v-model="ruleForm.delivery"></el-switch>
       </el-form-item>
-      <el-form-item label="活动性质" prop="type">
+
+      <el-form-item label="特殊要求" prop="type">
         <el-checkbox-group v-model="ruleForm.type">
-          <el-checkbox label="checkbox1" name="type">美食/餐厅线上活动</el-checkbox>
-          <el-checkbox label="checkbox2" name="type">地推活动</el-checkbox>
-          <el-checkbox label="checkbox3" name="type">线下主题活动</el-checkbox>
-          <el-checkbox label="checkbox4" name="type">单纯品牌曝光</el-checkbox>
+          <el-checkbox label="checkbox1" name="type">不可外借</el-checkbox>
+          <el-checkbox label="checkbox2" name="type">外借押金</el-checkbox>
+          <el-checkbox label="checkbox3" name="type">高级用户专属</el-checkbox>
+          <el-checkbox label="checkbox4" name="type">珍藏版本</el-checkbox>
         </el-checkbox-group>
       </el-form-item>
-      <el-form-item label="特殊资源" prop="resource">
-        <el-radio-group v-model="ruleForm.resource">
-          <el-radio label="radio1">线上品牌商赞助</el-radio>
-          <el-radio label="radio2">线下场地免费</el-radio>
-        </el-radio-group>
-      </el-form-item>
-      <el-form-item label="活动形式" prop="desc">
+
+      <el-form-item label="内容简介" prop="desc1">
             <el-col :span="11" >
-                <el-input type="textarea" v-model="ruleForm.desc"></el-input>
-            </el-col>    
-        
+                <el-input type="textarea" v-model="ruleForm.desc1"></el-input>
+            </el-col>      
       </el-form-item>
+
+      <el-form-item label="作者简介" prop="desc2">
+            <el-col :span="11" >
+                <el-input type="textarea" v-model="ruleForm.desc2"></el-input>
+            </el-col>      
+      </el-form-item>
+
       <el-form-item>
         <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
         <el-button @click="resetForm('ruleForm')">重置</el-button>
       </el-form-item>
+
     </el-form>
 </div>
 </template>
+
 <script>
     import { Message } from 'element-ui';
     import {global} from 'src/global/global';
@@ -67,36 +83,38 @@
           return {
             ruleForm: {
               name: '',
+              id: '',
+              author:'',
               region: '',
               date1: '',
               date2: '',
               delivery: false,
               type: [],
-              resource: '',
-              desc: ''
+              desc1: '',
+              desc2: ''
             },
             rules: {
               name: [
-                { required: true, message: '请输入活动名称', trigger: 'blur' },
-                { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+                { required: true, message: '请输入书籍名称', trigger: 'blur' }
+                // { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+              ],
+              id: [
+                { required: true, message: '请输入书籍编号', trigger: 'blur' }
+              ],
+              author: [
+                { required: true, message: '请输入书籍作者', trigger: 'blur' }
               ],
               region: [
-                { required: true, message: '请选择活动区域', trigger: 'change' }
+                { required: true, message: '请选择书籍类别', trigger: 'change' }
               ],
               date1: [
                 { type: 'date', required: true, message: '请选择日期', trigger: 'blur' }
               ],
-              date2: [
-                { type: 'date', required: true, message: '请选择时间', trigger: 'blur' }
+              desc1: [
+                { required: true, message: '请填写内容简介', trigger: 'blur' }
               ],
-              type: [
-                { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }
-              ],
-              resource: [
-                { required: true, message: '请选择活动资源', trigger: 'change' }
-              ],
-              desc: [
-                { required: true, message: '请填写活动形式', trigger: 'blur' }
+              desc2: [
+                { required: true, message: '请填写作者简介', trigger: 'blur' }
               ]
             }
           };
@@ -141,7 +159,7 @@
           submitForm(formName) {
             this.$refs[formName].validate((valid) => {
               if (valid) {
-                    alert('已提交，提交参数请看控制台');
+                    alert('已提交书籍信息，提交参数请看控制台');
                     console.log('提交入参：',this.ruleForm);
 
                     //正式编程以下代码请放到接口成功回调函数中

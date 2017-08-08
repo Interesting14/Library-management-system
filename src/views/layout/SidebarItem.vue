@@ -91,7 +91,7 @@
 
                     <router-link  class="menu-indent" to="/example/form" v-if="routes['/example/form'] ">
                         <el-menu-item index="/example/form">
-                            form表单编辑
+                            新增书目
                         </el-menu-item>
                     </router-link>
                    

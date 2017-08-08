@@ -159,7 +159,7 @@ export const constantRouterMap = [
       { path: 'humanityHistory', component: HumanityHistory, name: '人文历史' },
       { path: 'childrenBooks', component: ChildrenBooks, name: '少儿读物' },
 
-      { path: 'form', component: Form, name: 'form表单编辑' },
+      { path: 'form', component: Form, name: '新增书目' },
       { path: 'tinymce', component: Tinymce, name: '富文本编辑器' },
       { path: 'mixin', component: Mixin, name: '小组件' },
       { path: '31', component: Form, name: '三级菜单1' },
