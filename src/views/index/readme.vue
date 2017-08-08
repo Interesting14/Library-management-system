@@ -26,8 +26,9 @@
 
         <h1 style="font-family:'华文新魏';font-size:60px" align="center">图书信息管理系统</h1>
     
-    <div id="show" style="width:60%; height:400px;">
-      <el-carousel :interval="5000" arrow="always" style="height:380px;">
+    <!-- 轮播 -->
+    <div id="show" style="width:90%;" align="center">
+      <el-carousel :interval="3000" type="card">
         <el-carousel-item v-for="item in 4" :key="item"></el-carousel-item>
       </el-carousel>
     </div>
@@ -387,12 +388,12 @@ export default {
 <style rel="stylesheet/scss" lang="scss">
     /*轮播*/
     #show{
-      margin: 20px 20%; 
+      margin: 30px;
     }
 
    .el-carousel__item{
+    left: -80px;
     width: 700px;
-    height: 380px; 
    }
     
     .el-carousel__item:nth-child(3) {
