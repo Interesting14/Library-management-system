@@ -34,6 +34,7 @@ const ChildrenBooks = _import('example/childrenBooks');
 
 const TableList = _import('example/tableList');
 const MyBooklist = _import('example/myBooklist');
+const RecommendBook = _import('example/recommendBook');
 
 const Form = _import('example/form');
 const Tinymce = _import('example/tinymce');
@@ -103,6 +104,15 @@ export const constantRouterMap = [
     noDropdown: true,
     children: [{ path: 'myBooklist', component: MyBooklist, name: '我的书单' }]
   },
+  {
+    path: '/example',
+    component: Layout,
+    redirect: 'noredirect',
+    name: '',
+    // icon: 'EXCEL',
+    noDropdown: true,
+    children: [{ path: 'recommendBook', component: RecommendBook, name: '推荐书目' }]
+  },
 
   {
     path: '/movie',
@@ -111,7 +121,7 @@ export const constantRouterMap = [
     name: '',
     // icon: 'EXCEL',
     noDropdown: true,
-    children: [{ path: 'newMovie', component: NewMovie, name: '推荐书目' }]
+    children: [{ path: 'newMovie', component: NewMovie, name: '热门电影' }]
   },
   {
     path: '/movie',
@@ -120,7 +130,7 @@ export const constantRouterMap = [
     name: '',
     // icon: 'EXCEL',
     noDropdown: true,
-    children: [{ path: 'movieSearch', component: MovieSearch, name: '图书搜索' }]
+    children: [{ path: 'movieSearch', component: MovieSearch, name: '电影搜索' }]
   },
 
   {

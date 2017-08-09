@@ -14,27 +14,30 @@
             <router-link  to="/index/readme"  v-if="routes['/index/readme']" >
                 <el-menu-item index="/index/readme">
                     <i class="fa fa-home" aria-hidden="true"></i> 首页
-            
                 </el-menu-item>
             </router-link>
 
             <router-link  to="/example/myBooklist"  v-if="routes['/example/myBooklist']" >
                 <el-menu-item index="/example/myBooklist">
-                    <i class="fa fa-table" aria-hidden="true"></i> 我的书单
-            
+                    <i class="fa fa-heart" aria-hidden="true"></i> 我的书单
+                </el-menu-item>
+            </router-link>
+
+            <router-link  to="/example/recommendBook"  v-if="routes['/example/recommendBook']" >
+                <el-menu-item index="/example/recommendBook">
+                    <i class="fa fa-book" aria-hidden="true"></i> 推荐书目
                 </el-menu-item>
             </router-link>
 
             <router-link  to="/movie/newMovie"  v-if="routes['/movie/newMovie']" >
                 <el-menu-item index="/movie/newMovie">
-                    <i class="fa fa-file-video-o" aria-hidden="true"></i> 推荐书目
-            
+                    <i class="fa fa-file-video-o" aria-hidden="true"></i> 热门电影
                 </el-menu-item>
             </router-link>
+
             <router-link  to="/movie/movieSearch"  v-if="routes['/movie/movieSearch']" >
                 <el-menu-item index="/movie/movieSearch">
-                    <i class="fa fa-file-video-o" aria-hidden="true"></i> 图书搜索
-            
+                    <i class="fa fa-file-video-o" aria-hidden="true"></i> 电影搜索
                 </el-menu-item>
             </router-link>
             
@@ -95,7 +98,7 @@
                         </el-menu-item>
                     </router-link>
                    
-                    <router-link  class="menu-indent" to="/example/tinymce" v-if="routes['/example/tinymce']">
+                    <!-- <router-link  class="menu-indent" to="/example/tinymce" v-if="routes['/example/tinymce']">
                         <el-menu-item index="/example/tinymce">
                             富文本编辑器
                         </el-menu-item>
@@ -106,7 +109,6 @@
                         </el-menu-item>
                     </router-link>
                     
-                    <!-- 三级菜单 -->
                     <el-submenu index="table内编辑" >
                         <template slot="title">
                            第二级菜单
@@ -122,7 +124,7 @@
                                     地址错误跳404
                                 </el-menu-item>
                             </router-link>                     
-                    </el-submenu>
+                    </el-submenu> -->
 
             </el-submenu>
 
