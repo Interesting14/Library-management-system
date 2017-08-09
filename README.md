@@ -1,10 +1,9 @@
 ﻿# 图书信息管理系统 Library-management-system 1.0 #
 使用到的技术：vue + vue-resource + vue-router + vuex(大型spa必备) + element-ui + ES6 + webpack + npm 
 
-[测试地址]
+[测试地址] （ https://interesting14.github.io/libraryManagementSystem/ ）
 
 # 注意：最近好人多反应项目无法正常运行，是因为好多人升级node到最新版的8.x版本。目前这个项目使用6.0~6.11之间的node版本才行！#
-
 
 ## 功能(全部数据进行本地json模拟)
 - 系统说明
@@ -23,7 +22,6 @@
 - 导出excel
 - views-tab
 
-
 ## 开发
 ```bash
    
@@ -39,7 +37,6 @@
 ```
 
 浏览器访问 http://localhost:2017
-
 
 ## 发布
 ```bash
@@ -103,9 +100,6 @@
 ## 状态管理
 目前只有用户信息、菜单权限、app配置相关状态使用vuex存储在全局，其它数据都由每个业务页面自己管理。
 
-
 ## License（执照）
-
 [MIT](http://opensource.org/licenses/MIT)
-
 Copyright (c) 2017-present, LSS
