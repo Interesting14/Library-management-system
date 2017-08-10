@@ -3,7 +3,7 @@
 
 [测试地址] （ https://interesting14.github.io/libraryManagementSystem/ ）
 
-# 注意：最近好人多反应项目无法正常运行，是因为好多人升级node到最新版的8.x版本。目前这个项目使用6.0~6.11之间的node版本才行！#
+# 注意：目前这个项目使用node6.0~6.11之间的node版本才行！
 
 ## 功能(全部数据进行本地json模拟)
 - 系统说明
