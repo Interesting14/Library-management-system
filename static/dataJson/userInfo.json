@@ -23,7 +23,6 @@
                 "/movie/movieSearch":true,
         		"/errorpage/401":false,
         		"/errorpage/404":false,
-                "/example/recommendBook":true,
                 "/example/education":true,
                 "/example/youthLiterature":true,
                 "/example/technologyLife":true,

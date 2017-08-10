@@ -23,12 +23,6 @@
                 </el-menu-item>
             </router-link>
 
-            <router-link  to="/example/recommendBook"  v-if="routes['/example/recommendBook']" >
-                <el-menu-item index="/example/recommendBook">
-                    <i class="fa fa-book" aria-hidden="true"></i> 推荐书目
-                </el-menu-item>
-            </router-link>
-
             <router-link  to="/movie/newMovie"  v-if="routes['/movie/newMovie']" >
                 <el-menu-item index="/movie/newMovie">
                     <i class="fa fa-file-video-o" aria-hidden="true"></i> 热门电影
